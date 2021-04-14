@@ -1,0 +1,39 @@
+Author
+Message-From
+MboxParser-reply-to
+Message-To
+Message:Raw-Header:Reply-To
+isReconnaissance
+isSocialEngineering
+isMalware
+isCredentialPhishing
+isMeetOnline
+isFriend
+isFriendOfFriends
+isKins
+isMetBefore
+isClaimedToBeSuperior
+isUrgent
+attackerOffer
+locations
+sentiment
+misspellings
+randomCaps
+fraudScore
+gdpPerCapitaPerCountry
+emailSenderAge
+urls
+anyUrlsInContent
+numbersOfUrls
+areUrlsMalicious
+createdAt
+isReceiverFromEduOrUniversity
+TTR'ed extracted text
+part8_results
+part4_800_emails_generated_used_for_Grover
+part4 labels
+part6 images paths
+part7 persona representation paths
+part 9 caption image path
+part 9 captions
+part 10 replies file paths

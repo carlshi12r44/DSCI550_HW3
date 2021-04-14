@@ -1,0 +1,20 @@
+.DS_Store
+### VisualStudioCode ###
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+data/data
+data/data.zip
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
+
+data/mysecret
+data/.ipynb_checkpoints
+elasticsearch-7.12.0
+myetllib
+elasticsearch-7.12.0-darwin-x86_64.tar.gz
+HOWTORUNTSVTOJSON.txt
+prepare_part2_viz4_data_copy.py
