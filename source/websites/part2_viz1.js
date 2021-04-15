@@ -18,9 +18,9 @@ var data = d3.json(
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
     data_sub = {
-      Reconnaissance: data.isReconnaissance,
+      "Reconnaissance": data.isReconnaissance,
       "Social Engineering": data.isSocialEngineering,
-      Malware: data.isMalware,
+      "Malware": data.isMalware,
       "Credential Phishing": data.isCredentialPhishing,
     };
     var color = d3.scaleOrdinal().domain(data).range(d3.schemeDark2);
