@@ -10,7 +10,7 @@ data/data.zip
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 **/.history
-
+source/python_code/.ipynb_checkpoints/
 data/mysecret
 data/.ipynb_checkpoints
 elasticsearch-7.12.0
