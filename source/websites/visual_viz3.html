@@ -49,7 +49,11 @@
         padding: 6px 0;
         color: cornflowerblue;
       }
+      button {
+        margin: 2%;
+      }
     </style>
+
     <title>Team 3 Project Showcase room</title>
   </head>
   <body>
@@ -100,15 +104,33 @@
           </div>
         </div>
       </nav>
-      <p class="visual-header">These are our visualizations 3</p>
+      <p class="visual-header">
+        Misspellings and Random Caps for different age groups
+      </p>
       <div class="container">
         <div class="row">
           <div class="col-lg">
             <div class="visual-wrapper">
-              <script src="https://d3js.org/d3.v4.js"></script>
+              <script src="https://d3js.org/d3.v4.min.js"></script>
               <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
               <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
               <script src="part2_viz3.js"></script>
+
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onclick="misspellingsDataSet()"
+              >
+                Switch To Misspellings
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onclick="randomCapsDataset()"
+              >
+                Switch To Random Caps
+              </button>
+
               <div id="res_viz3"></div>
             </div>
           </div>
