@@ -4,7 +4,6 @@ d3.json(
   function (data) {
     // set the dimensions and margins of the graph
     var data_first = data["20_to_25"].sort(d3.ascending);
-
     var data_second = data["25_to_30"].sort(d3.ascending);
     var data_third = data["30_to_35"].sort(d3.ascending);
     var data_forth = data["35_to_40"].sort(d3.ascending);
@@ -73,7 +72,10 @@ d3.json(
       width = window.innerWidth * 0.7 - margin.left - margin.right,
       height = window.innerHeight * 0.7 - margin.top - margin.bottom;
 
+    // .attr("width", width + margin.left + margin.right)
+    // .attr("height", height + margin.top + margin.bottom)
     // append the svg object to the body of the page
+    currentWidth = parseInt(d3.select("#res_viz3").style("width"), 1000);
     var svg = d3
       .select("#res_viz3")
       .append("svg")
