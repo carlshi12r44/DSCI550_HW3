@@ -18,3 +18,6 @@ myetllib
 elasticsearch-7.12.0-darwin-x86_64.tar.gz
 HOWTORUNTSVTOJSON.txt
 prepare_part2_viz4_data_copy.py
+girder
+image_space
+data/hw2_data

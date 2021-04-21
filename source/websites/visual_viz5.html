@@ -42,7 +42,9 @@
       }
       .visual-header {
         color: #000;
-        margin: 2%;
+      }
+      .dummy-region {
+        margin: 5%;
       }
       nav a:hover {
         border-top: 4px solid white;
@@ -50,8 +52,56 @@
         padding: 6px 0;
         color: cornflowerblue;
       }
+      button {
+        margin: 2%;
+      }
+      .res_viz5 {
+        margin: 10%;
+      }
+      text {
+        font-size: 16px;
+        font-family: Open Sans, sans-serif;
+      }
+      text.title {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      text.caption {
+        font-weight: 400;
+        font-size: 20px;
+        fill: #777777;
+      }
+      text.label {
+        font-weight: 600;
+      }
+
+      text.valueLabel {
+        font-weight: 300;
+      }
+
+      text.yearText {
+        font-size: 100px;
+        font-weight: 700;
+        opacity: 0.25;
+      }
+      .tick text {
+        fill: #777777;
+      }
+      .xAxis .tick:nth-child(2) text {
+        text-anchor: start;
+      }
+      .tick line {
+        shape-rendering: CrispEdges;
+        stroke: #dddddd;
+      }
+      .tick line.origin {
+        stroke: #aaaaaa;
+      }
+      path.domain {
+        display: none;
+      }
     </style>
-    <title>Team 3 Project Showcase room</title>
+    <title>Team 3 showcase</title>
   </head>
   <body>
     <script
@@ -103,12 +153,13 @@
           </div>
         </div>
       </nav>
-      <p class="visual-header">These are our visualizations 2</p>
-      <div class="visual-wrapper">
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-        <script src="part2_viz2.js"></script>
-        <div id="res_viz2"></div>
+      <div class="container">
+        <div class="visual-wrapper">
+          <script src="https://d3js.org/d3.v5.min.js"></script>
+          <script src="part2_viz5.js"></script>
+          <div class="dummy-region"></div>
+          <div id="res_viz5"></div>
+        </div>
       </div>
     </div>
   </body>

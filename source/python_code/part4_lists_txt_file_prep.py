@@ -2,7 +2,7 @@ import os
 from glob import glob
 
 
-def process_list_to_ascending(files_list, save_directory):
+def process_list_to_ascending(files_list, save_directory, name):
     """
     assume your working directory is the project root directory, outside the source folder
     """
@@ -14,11 +14,11 @@ def process_list_to_ascending(files_list, save_directory):
         i +=1
     return res
     
-def append_to_list(directory):
+def append_to_list(directory, name):
     dir_glob = glob(directory + "/*")
     
     # rename the file
-    # dir_glob = process_list_to_ascending(dir_glob, directory)
+    #dir_glob = process_list_to_ascending(dir_glob, directory, name)
         
     sorted(dir_glob, key=lambda i: int(os.path.splitext(os.path.basename(i))[0]))
     
@@ -33,13 +33,13 @@ def format_path(dir_glob, name, save_directory):
     return res
 
 if __name__ == "__main__":
-    cred_phish_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/CredentialPhishing")
+    cred_phish_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/CredentialPhishing", "CredentialPhishing")
     cred_phish_attackers = format_path(cred_phish_attackers, "CredentialPhishing",os.getcwd() + "/data/hw2_data/part7/CredentialPhishing")
-    malware_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/Malware")
+    malware_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/Malware", "Malware")
     malware_attackers = format_path(malware_attackers, "Malware", os.getcwd() + "/data/hw2_data/part7/Malware")
-    reconnaissance_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/Reconnaissance")
+    reconnaissance_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/Reconnaissance", "Reconnaissance")
     reconnaissance_attackers = format_path(reconnaissance_attackers, "Reconnaissance", os.getcwd() + "/data/hw2_data/part7/Reconnaissance")
-    social_engineering_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/SocialEngineering")
+    social_engineering_attackers = append_to_list(os.getcwd() + "/data/hw2_data/part7/SocialEngineering", "SocialEngineering")
     social_engineering_attackers = format_path(social_engineering_attackers, "SocialEngineering", os.getcwd() + "/data/hw2_data/part7/SocialEngineering")
 
     res = []

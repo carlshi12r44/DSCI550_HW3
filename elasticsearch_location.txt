@@ -1,0 +1,3 @@
+/usr/local/var/homebrew/linked/elasticsearch-full/bin
+
+use command line to let elasticsearch runnning first and then do the job using python elasticsearch client

@@ -42,7 +42,6 @@
       }
       .visual-header {
         color: #000;
-        margin: 2%;
       }
       nav a:hover {
         border-top: 4px solid white;
@@ -50,7 +49,11 @@
         padding: 6px 0;
         color: cornflowerblue;
       }
+      button {
+        margin: 2%;
+      }
     </style>
+
     <title>Team 3 Project Showcase room</title>
   </head>
   <body>
@@ -96,19 +99,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="visual_viz4.html">Visualization 4</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="visual_viz5.html">Visualization 5</a>
-              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <p class="visual-header">These are our visualizations 2</p>
-      <div class="visual-wrapper">
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-        <script src="part2_viz2.js"></script>
-        <div id="res_viz2"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <div class="visual-wrapper">
+              <script src="https://d3js.org/d3.v4.min.js"></script>
+              <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+              <script src="part2_viz5.js"></script>
+              <div id="res_viz5"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
