@@ -16,7 +16,7 @@ d3.csv(
 
   const margin = {
     top: 100,
-    right: 0,
+    right: 25,
     bottom: 100,
     left: 200,
   };
@@ -105,7 +105,7 @@ d3.csv(
     .enter()
     .append("text")
     .attr("class", "valueLabel")
-    .attr("x", (d) => x(d.value))
+    .attr("x", (d) => x(d.value) - 10)
     .attr("y", (d) => y(d.rank) + 40 + (y(1) - y(0)) / 2 + 1)
     .text((d) => d3.format(",.0f")(d.value));
 
@@ -208,7 +208,7 @@ d3.csv(
       .enter()
       .append("text")
       .attr("class", "valueLabel")
-      .attr("x", (d) => x(d.value) + 5)
+      .attr("x", (d) => x(d.value - 10))
       .attr("y", (d) => y(top_n + 1) + 5)
       .text((d) => d3.format(",.0f")(d.value))
       .transition()
@@ -220,7 +220,7 @@ d3.csv(
       .transition()
       .duration(tickDuration)
       .ease(d3.easeLinear)
-      .attr("x", (d) => x(d.value) + 5)
+      .attr("x", (d) => x(d.value) - 10)
       .attr("y", (d) => y(d.rank) + 5 + (y(1) - y(0)) / 2 + 1)
       .tween("text", function (d) {
         let i = d3.interpolateRound(d.value, d.value);
@@ -234,7 +234,7 @@ d3.csv(
       .transition()
       .duration(tickDuration)
       .ease(d3.easeLinear)
-      .attr("x", (d) => x(d.value) + 5)
+      .attr("x", (d) => x(d.value - 10))
       .attr("y", (d) => y(top_n + 1) + 5)
       .remove();
 
