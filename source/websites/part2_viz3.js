@@ -99,7 +99,7 @@ misspellingsDataSet = () => {
         .call(d3.axisBottom(x));
 
       // Show the Y scale
-      var y = d3.scaleLinear().domain([-1000, 1500]).range([height, 0]);
+      var y = d3.scaleLinear().domain([0, 1500]).range([height, 0]);
       svg.append("g").call(d3.axisLeft(y));
 
       // a few features for the box
@@ -366,7 +366,7 @@ randomCapsDataset = () => {
         .call(d3.axisBottom(x));
 
       // Show the Y scale
-      var y = d3.scaleLinear().domain([-10, 40]).range([height, 0]);
+      var y = d3.scaleLinear().domain([0, 40]).range([height, 0]);
       svg.append("g").call(d3.axisLeft(y));
 
       // a few features for the box
