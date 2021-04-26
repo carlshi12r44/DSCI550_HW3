@@ -1,3 +1,4 @@
+# Final Project from Team 3 DSCI 550 Spring 2021
 ## How would you run the project
 
 ### all the images are free for use (free stock images), no copyright issues
