@@ -1,6 +1,6 @@
 // Read the data and compute summary statistics for each specie
 misspellingsDataSet = () => {
-  d3.select('svg').selectAll('*').remove();
+  d3.select("svg").selectAll("*").remove();
   d3.json(
     "https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/part2_viz3_data_misspellings.json",
     function (data) {
@@ -70,8 +70,8 @@ misspellingsDataSet = () => {
 
       var d5Stat = summarize_all(data_fifth);
 
-      var margin = { top: 10, right: 30, bottom: 40, left: 150 },
-        width = window.innerWidth * 0.7 - margin.left - margin.right,
+      var margin = { top: 10, right: 30, bottom: 40, left: 120 },
+        width = window.innerWidth - margin.left - margin.right,
         height = window.innerHeight * 0.7 - margin.top - margin.bottom;
 
       // .attr("width", width + margin.left + margin.right)
@@ -131,15 +131,15 @@ misspellingsDataSet = () => {
         .attr("stroke", "black");
       svg
         .append("line")
-        .attr("x1", center + 18 * width)
-        .attr("x2", center + 18 * width)
+        .attr("x1", center + 17 * width)
+        .attr("x2", center + 17 * width)
         .attr("y1", y(d4Stat.min))
         .attr("y2", y(d4Stat.max))
         .attr("stroke", "black");
       svg
         .append("line")
-        .attr("x1", center + 24 * width)
-        .attr("x2", center + 24 * width)
+        .attr("x1", center + 22.5 * width)
+        .attr("x2", center + 22.5 * width)
         .attr("y1", y(d5Stat.min))
         .attr("y2", y(d5Stat.max))
         .attr("stroke", "black");
@@ -171,7 +171,7 @@ misspellingsDataSet = () => {
         .style("fill", "#69b3a2");
       svg
         .append("rect")
-        .attr("x", center - width / 2 + 18 * width)
+        .attr("x", center - width / 2 + 17 * width)
         .attr("y", y(d4Stat.Q3))
         .attr("height", y(d4Stat.Q1) - y(d4Stat.Q3))
         .attr("width", width)
@@ -179,7 +179,7 @@ misspellingsDataSet = () => {
         .style("fill", "#69b3a2");
       svg
         .append("rect")
-        .attr("x", center - width / 2 + 24 * width)
+        .attr("x", center - width / 2 + 22.5 * width)
         .attr("y", y(d5Stat.Q3))
         .attr("height", y(d5Stat.Q1) - y(d5Stat.Q3))
         .attr("width", width)
@@ -235,8 +235,8 @@ misspellingsDataSet = () => {
         .data([d4Stat.min, d4Stat.mean, d4Stat.max])
         .enter()
         .append("line")
-        .attr("x1", center - width / 2 + 18 * width)
-        .attr("x2", center + width / 2 + 18 * width)
+        .attr("x1", center - width / 2 + 17 * width)
+        .attr("x2", center + width / 2 + 17 * width)
         .attr("y1", function (d) {
           return y(d);
         })
@@ -249,8 +249,8 @@ misspellingsDataSet = () => {
         .data([d5Stat.min, d5Stat.mean, d5Stat.max])
         .enter()
         .append("line")
-        .attr("x1", center - width / 2 + 24 * width)
-        .attr("x2", center + width / 2 + 24 * width)
+        .attr("x1", center - width / 2 + 22.5 * width)
+        .attr("x2", center + width / 2 + 22.5 * width)
         .attr("y1", function (d) {
           return y(d);
         })
@@ -263,13 +263,12 @@ misspellingsDataSet = () => {
 };
 // onclick function for button
 randomCapsDataset = () => {
-  d3.select('svg').selectAll('*').remove();
-  
+  d3.select("svg").selectAll("*").remove();
+
   // Read the data and compute summary statistics for each specie
   d3.json(
     "https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/part2_viz3_data_randomCaps.json",
     function (data) {
-      
       // a few features for the box
       var center = 200;
       var width = 100;
@@ -338,9 +337,9 @@ randomCapsDataset = () => {
       var d4Stat = summarize_all(data_forth);
 
       var d5Stat = summarize_all(data_fifth);
-      console.log(d1Stat)
-      var margin = { top: 20, right: 30, bottom: 45, left: 150 },
-        width = window.innerWidth * 0.7 - margin.left - margin.right,
+      console.log(d1Stat);
+      var margin = { top: 20, right: 30, bottom: 45, left: 120 },
+        width = window.innerWidth - margin.left - margin.right,
         height = window.innerHeight * 0.7 - margin.top - margin.bottom;
 
       // .attr("width", width + margin.left + margin.right)
@@ -385,29 +384,29 @@ randomCapsDataset = () => {
 
       svg
         .append("line")
-        .attr("x1", center + 6 * width)
-        .attr("x2", center + 6 * width)
+        .attr("x1", center + 5 * width)
+        .attr("x2", center + 5 * width)
         .attr("y1", y(d2Stat.min))
         .attr("y2", y(d2Stat.max))
         .attr("stroke", "black");
       svg
         .append("line")
-        .attr("x1", center + 12 * width)
-        .attr("x2", center + 12 * width)
+        .attr("x1", center + 11 * width)
+        .attr("x2", center + 11 * width)
         .attr("y1", y(d3Stat.min))
         .attr("y2", y(d3Stat.max))
         .attr("stroke", "black");
       svg
         .append("line")
-        .attr("x1", center + 18 * width)
-        .attr("x2", center + 18 * width)
+        .attr("x1", center + 17 * width)
+        .attr("x2", center + 17 * width)
         .attr("y1", y(d4Stat.min))
         .attr("y2", y(d4Stat.max))
         .attr("stroke", "black");
       svg
         .append("line")
-        .attr("x1", center + 24 * width)
-        .attr("x2", center + 24 * width)
+        .attr("x1", center + 22.5 * width)
+        .attr("x2", center + 22.5 * width)
         .attr("y1", y(d5Stat.min))
         .attr("y2", y(d5Stat.max))
         .attr("stroke", "black");
@@ -423,7 +422,7 @@ randomCapsDataset = () => {
         .style("fill", "#69b3a2");
       svg
         .append("rect")
-        .attr("x", center - width / 2 + 6 * width)
+        .attr("x", center - width / 2 + 5 * width)
         .attr("y", y(d2Stat.Q3))
         .attr("height", y(d2Stat.Q1) - y(d2Stat.Q3))
         .attr("width", width)
@@ -431,7 +430,7 @@ randomCapsDataset = () => {
         .style("fill", "#69b3a2");
       svg
         .append("rect")
-        .attr("x", center - width / 2 + 12 * width)
+        .attr("x", center - width / 2 + 11 * width)
         .attr("y", y(d3Stat.Q3))
         .attr("height", y(d3Stat.Q1) - y(d3Stat.Q3))
         .attr("width", width)
@@ -439,7 +438,7 @@ randomCapsDataset = () => {
         .style("fill", "#69b3a2");
       svg
         .append("rect")
-        .attr("x", center - width / 2 + 18 * width)
+        .attr("x", center - width / 2 + 17 * width)
         .attr("y", y(d4Stat.Q3))
         .attr("height", y(d4Stat.Q1) - y(d4Stat.Q3))
         .attr("width", width)
@@ -447,7 +446,7 @@ randomCapsDataset = () => {
         .style("fill", "#69b3a2");
       svg
         .append("rect")
-        .attr("x", center - width / 2 + 24 * width)
+        .attr("x", center - width / 2 + 22.5 * width)
         .attr("y", y(d5Stat.Q3))
         .attr("height", y(d5Stat.Q1) - y(d5Stat.Q3))
         .attr("width", width)
@@ -475,8 +474,8 @@ randomCapsDataset = () => {
         .data([d2Stat.min, d2Stat.mean, d2Stat.max])
         .enter()
         .append("line")
-        .attr("x1", center - width / 2 + 6 * width)
-        .attr("x2", center + width / 2 + 6 * width)
+        .attr("x1", center - width / 2 + 5 * width)
+        .attr("x2", center + width / 2 + 5 * width)
         .attr("y1", function (d) {
           return y(d);
         })
@@ -489,8 +488,8 @@ randomCapsDataset = () => {
         .data([d3Stat.min, d3Stat.mean, d3Stat.max])
         .enter()
         .append("line")
-        .attr("x1", center - width / 2 + 12 * width)
-        .attr("x2", center + width / 2 + 12 * width)
+        .attr("x1", center - width / 2 + 11 * width)
+        .attr("x2", center + width / 2 + 11 * width)
         .attr("y1", function (d) {
           return y(d);
         })
@@ -503,8 +502,8 @@ randomCapsDataset = () => {
         .data([d4Stat.min, d4Stat.mean, d4Stat.max])
         .enter()
         .append("line")
-        .attr("x1", center - width / 2 + 18 * width)
-        .attr("x2", center + width / 2 + 18 * width)
+        .attr("x1", center - width / 2 + 17 * width)
+        .attr("x2", center + width / 2 + 17 * width)
         .attr("y1", function (d) {
           return y(d);
         })
@@ -517,8 +516,8 @@ randomCapsDataset = () => {
         .data([d5Stat.min, d5Stat.mean, d5Stat.max])
         .enter()
         .append("line")
-        .attr("x1", center - width / 2 + 24 * width)
-        .attr("x2", center + width / 2 + 24 * width)
+        .attr("x1", center - width / 2 + 22.5 * width)
+        .attr("x2", center + width / 2 + 22.5 * width)
         .attr("y1", function (d) {
           return y(d);
         })
