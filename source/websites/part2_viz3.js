@@ -35,11 +35,11 @@ misspellingsDataSet = () => {
       };
       // min
       var calculate_min = (q1, interQuant) => {
-        return q1 - 1.5 * interQuant;
+        return 0;
       };
       // max
-      var calculate_max = (q1, interQuant) => {
-        return q1 + 1.5 * interQuant;
+      var calculate_max = (d) => {
+        return Math.max(d);
       };
 
       var summarize_all = (d) => {
@@ -48,7 +48,7 @@ misspellingsDataSet = () => {
         var q3 = calculate_q3(d);
         var interQuant = calculate_inter_quat(q1, q3);
         var min = calculate_min(q1, interQuant);
-        var max = calculate_max(q1, interQuant);
+        var max = calculate_max(d);
         var res = {
           Q1: q1,
           mean: mean,
@@ -303,11 +303,11 @@ randomCapsDataset = () => {
       };
       // min
       var calculate_min = (q1, interQuant) => {
-        return q1 - 1.5 * interQuant;
+        return 0;
       };
       // max
-      var calculate_max = (q1, interQuant) => {
-        return q1 + 1.5 * interQuant;
+      var calculate_max = (d) => {
+        return Math.max(d);
       };
 
       var summarize_all = (d) => {
@@ -316,7 +316,7 @@ randomCapsDataset = () => {
         var q3 = calculate_q3(d);
         var interQuant = calculate_inter_quat(q1, q3);
         var min = calculate_min(q1, interQuant);
-        var max = calculate_max(q1, interQuant);
+        var max = calculate_max(d);
         var res = {
           Q1: q1,
           mean: mean,
