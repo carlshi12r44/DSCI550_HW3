@@ -38,7 +38,7 @@ def add_json_files_to_es(es, directory_glob):
 if __name__ == "__main__":
     
     es = Elasticsearch()
-    json_docs = add_json_files_to_es(es, os.getcwd() + "/data/input_part3/*")
+    #json_docs = add_json_files_to_es(es, os.getcwd() + "/data/input_part3/*")
     
     # get all the documents indexed by the elasticsearch
     es_response = scan(
@@ -48,5 +48,9 @@ if __name__ == "__main__":
         query={"query": { "match_all" : {}}}
     )
 
+    i = 1
     for item in es_response:
-        print(json.dumps(item))
+        with open(f"part5_indices_{i}.json", "w+") as file_write:
+            json.dump(item, file_write)
+        i+=1
+        print(f"process {i} item")

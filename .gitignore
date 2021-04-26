@@ -21,3 +21,14 @@ prepare_part2_viz4_data_copy.py
 girder
 image_space
 data/hw2_data
+
+GeoParser/
+data/total/
+source/images/
+data/part5_index_result.zip
+data/input_part3/part2_viz5.csv
+data/input_part3/part2_viz5.json
+part6_solr_input.csv
+tika-server-1.25.jar
+data/part5_indices/
+data/part6_response.xml

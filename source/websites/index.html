@@ -13,9 +13,18 @@
       crossorigin="anonymous"
     />
     <style>
+      @media only screen and (max-device-width: 1366px) {
+        .background-image-forest {
+          background-attachment: scroll;
+        }
+        .background-image-night-sky {
+          background-attachment: scroll;
+        }
+      }
       html,
       body {
         height: 100%;
+        color: #777;
       }
       body {
         text-align: center;
@@ -23,31 +32,150 @@
       }
 
       html * {
-        font-size: 30pt !important;
-        font-family: Arial !important;
+        font-style: large;
+        font-variant-ligatures: normal;
+        font-variant-caps: normal;
+        font-variant-numeric: normal;
+        font-variant-east-asian: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        line-height: 1.8;
+        font-family: Lato, sans-serif;
+      }
+
+      .background-image-forest {
+        /* The image used */
+        background-image: url("https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/background1.jpeg");
+        /* Full height */
+        height: 100%;
+        opacity: 0.90;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .background-image-night-sky {
+        /* The image used */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/background2.jpeg");
+        /* Full height */
+        height: 100%;
+        opacity: 0.90;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .background-image-forest-two {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/background3.jpeg");
+        /* Full height */
+        height: 100%;
+        opacity: 0.90;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .background-image-forest-three {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/background4.jpeg");
+        /* Full height */
+        height: 100%;
+        opacity: 0.90;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .background-image-forest-four {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/background5.jpeg");
+        /* Full height */
+        height: 100%;
+        opacity: 0.90;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .background-image-forest-five {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://dsci550-sp21-hw3-part2.s3-us-west-2.amazonaws.com/background6.jpeg");
+        /* Full height */
+        height: 100%;
+        opacity: 0.90;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       .site-wrapper {
         display: table;
         width: 100%;
         height: 100%;
-        background-color: #333;
-        /*height: 100%; */
-        /*min-height: 100%;*/
       }
       .home-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
         text-align: center;
         color: floralwhite;
       }
+      .home-header {
+        color: floralwhite;
+        font-size: 100px;
+      }
       .home-intro {
         color: floralwhite;
+        font-size: 50px;
       }
+      .visual-header {
+        color: #000;
+        margin:2%;
+      }
+      .visual-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
       nav a:hover {
         border-top: 4px solid white;
         border-bottom: 4px solid rgb(233, 217, 217);
         padding: 6px 0;
+      }
+      .navbar {
+        background-attachment: fixed;
+        width: 100%;
+        height: 10%;
+        font-size: 50px;
+      }
+      .nav-link {
+        color: white;
+      }
+      #VizBtn {
+        font-size: 100px;
+        border-radius: 25px;
       }
     </style>
     <title>Team 3 Project Showcase room</title>
@@ -58,58 +186,89 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
+
     <!--NAV BAR-->
-    <div class="site-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about_us.html">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="visual_viz1.html">Visualization 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="visual_viz2.html">Visualization 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="visual_viz3.html">Visualization 3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="visual_viz4.html">Visualization 4</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="visual_viz5.html">Visualization 5</a>
-              </li>
-            </ul>
-          </div>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about_us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visual_viz1.html">Visualization 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visual_viz2.html">Visualization 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visual_viz3.html">Visualization 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visual_viz4.html">Visualization 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visual_viz5.html">Visualization 5</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <div class="home-wrapper">
-        <h1 class="home-header">This is Home Page</h1>
       </div>
-      <p class="home-intro">
-        Hey there, we are team 3 from the DSCI550 Machine Learning at Scale,
-        here are our visulizations on the fradulent email data we collected and
-        analyzed
-      </p>
+    </nav> -->
+    <div class="background-image-forest">
+      <div class="home-wrapper">
+        <h1 class="home-header">
+          Welcome! Let's see our project result from DSCI550 Team 3
+        </h1>
+        <p class="home-intro">
+          Hey there, we are team 3 from the DSCI550 Machine Learning at Scale,
+          here are our visulizations on the fradulent email data we collected
+          and analyzed
+        </p>
+      </div>
+    </div>
+    <!-- <div class="site-wrapper"> -->
+
+    <!-- </div> -->
+    <div class="background-image-night-sky">
+      <a href="visual_viz1.html" id="VizBtn" class="btn btn-dark" role="button">
+        Visualization One
+      </a>
+    </div>
+    <div class="background-image-forest-two">
+      <a href="visual_viz2.html" id="VizBtn" class="btn btn-dark" role="button">
+        Visualization Two
+      </a>
+    </div>
+    <div class="background-image-forest-three">
+      <a href="visual_viz3.html" id="VizBtn" class="btn btn-dark" role="button">
+        Visualization Three
+      </a>
+    </div>
+    <div class="background-image-forest-four">
+      <a href="visual_viz4.html" id="VizBtn" class="btn btn-dark" role="button">
+        Visualization Four
+      </a>
+    </div>
+    <div class="background-image-forest-five">
+      <a href="visual_viz5.html" id="VizBtn" class="btn btn-dark" role="button">
+        Visualization Five
+      </a>
     </div>
   </body>
 </html>
