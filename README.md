@@ -1,4 +1,5 @@
 # Final Project from Team 3 DSCI 550 Spring 2021
+
 ## How would you run the project
 
 ### all the images are free for use (free stock images), no copyright issues
@@ -25,6 +26,10 @@ root
     - this folder contains elasticsearch and ImageCat indices
   - total
     - this folder contains images from hw2 scammer persona images for hw 3 part 4
+  - `part1_data.json`
+    - this data is converted from previous homework tsv files
+  - part4_smqtk_similarity_outputs
+    - this folder contains part4 SMQTK similarity outputs with four different attacker groups
 - source
   - images
     - all images for background, all of them are storing in S3 storage bucket.
@@ -77,8 +82,7 @@ root
     [8] NASAJPLMEMEX ImageSpace
     [9] HTML
 
-The MIT License (MIT)
-=====================
+# The MIT License (MIT)
 
 Copyright © `2021` `USC`
 
@@ -102,4 +106,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-
